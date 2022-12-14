@@ -1,0 +1,22 @@
+{
+  "name": "product-display-backend",
+  "version": "1.0.0",
+  "description": "backend api for product display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StacksQueue/product-display-backend.git"
+  },
+  "author": "Paul Elyson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StacksQueue/product-display-backend/issues"
+  },
+  "homepage": "https://github.com/StacksQueue/product-display-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
