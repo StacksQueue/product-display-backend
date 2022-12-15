@@ -1,19 +1,30 @@
 const mongoose = require("mongoose");
 
 const ProductSchema = mongoose.Schema({
-  name: {
+  title: {
     type: String,
   },
   description: {
     type: String,
   },
-  brand: {
-    type: String,
+  price: {
+    type: Number,
   },
-  type: {
-    type: String,
+  discountPercentage: {
+    type: Number,
+  },
+  rating: {
+    type: Number
+  }, 
+  producttype: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "product_type",
     required: true,
-    default: "good",
+  },
+  imageUrl: {
+    type: String,
+    default:
+      "https://raw.githubusercontent.com/StacksQueue/product-display/main/src/assets/default.png",
   },
   dateAcquired: {
     type: Date,

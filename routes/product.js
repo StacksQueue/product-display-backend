@@ -1,22 +1,40 @@
 const express = require("express");
+const Product = require("../models/Product");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    console.log(req.query)
-    res.json({ data: null, message: "success", success: true });
+    res.json({ data: null, message: "get", success: true });
   } catch (err) {
-    res.json({ data: null, message: err.message, success: true });
+    res.json({ data: null, message: err.message, success: false });
   }
 });
 
 router.post("/", async (req, res) => {
-    try {
-      console.log(req.query)
-      res.json({ data: null, message: "success", success: true });
-    } catch (err) {
-      res.json({ data: null, message: err.message, success: true });
-    }
-  });
+  try {
+    let data = req.body;
+    console.log(data);
+    await Product.create(data);
+    res.json({ data: null, message: "post", success: true });
+  } catch (err) {
+    res.json({ data: null, message: err.message, success: false });
+  }
+});
+
+router.patch("/:id", async (req, res) => {
+  try {
+    res.json({ data: null, message: "patch", success: true });
+  } catch (err) {
+    res.json({ data: null, message: err.message, success: false });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    res.json({ data: null, message: "delete", success: true });
+  } catch (err) {
+    res.json({ data: null, message: err.message, success: false });
+  }
+});
 
 module.exports = router;
