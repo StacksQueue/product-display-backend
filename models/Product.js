@@ -14,18 +14,25 @@ const ProductSchema = mongoose.Schema({
     type: Number,
   },
   rating: {
-    type: Number
-  }, 
-  producttype: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "product_type",
-    required: true,
+    type: Number,
   },
-  imageUrl: {
+  stock: {
+    type: Number,
+  },
+  brand: {
     type: String,
-    default:
-      "https://raw.githubusercontent.com/StacksQueue/product-display/main/src/assets/default.png",
   },
+  category: {
+    type: String,
+  },
+  thumbnail: {
+    type: String,
+  },
+  images: [
+    {
+      type: String,
+    },
+  ],
   dateAcquired: {
     type: Date,
     required: true,

@@ -20,6 +20,7 @@ const productTypeRoute = require("./routes/productType");
 app.use("/api/product", productRoute);
 app.use("/api/producttype", productTypeRoute);
 
+mongoose.set('strictQuery', true);
 mongoose.connect("mongodb://localhost:27017/productdisplay", (err) => {
   if (err) console.log("database not connected");
   else console.log("database productdisplay connected");
