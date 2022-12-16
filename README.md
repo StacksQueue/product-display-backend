@@ -49,3 +49,12 @@ if you have nodemon installed globally
 > `$ ng serve`
 
 4.  navigate to http://localhost:4200/
+
+# notes
+
+you can find the following repositories of this project in my [Github](https://github.com/StacksQueue)
+
+1. [product display front-end](https://github.com/StacksQueue/product-display)
+2. [product display back-end](https://github.com/StacksQueue/product-display-backend)
+
+# PAUL ELYSON VILLACERAN
